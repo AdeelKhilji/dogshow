@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" media="all"  th:href="@{/styles/styles.css}">
+<title>Show List</title>
+</head>
+<body>
+<div class="banner">
+	<div id="bannerTitle">
+		<table>
+			<td>
+				<img id="bannerImg" th:src="@{/Images/hound_logo.jpg}">
+			</td>
+			<td>
+				<h3>DOG BREEDS RECORD SYSTEM</h3>
+			</td>
+		</table>
+	</div>
+</div>
+<br/>
+<div class="mainBtns">
+	<div>
+		<a th:href="@{/addBreed}"><span id="addBreed">ADD BREED</span></a>
+	</div>
+	<br/>
+	<div>
+		<a th:href="@{/dogList}"><span id="dogList">VIEW DOGS</span></a>
+	</div>
+	<br/>
+	<div>
+		<a th:href="@{/showList}"><span id="showList">SHOW LIST</span></a>
+	</div>
+</div>
+</body>
+</html>

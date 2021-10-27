@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>UPDATE DOG INFO</title>
+<link rel="stylesheet" type="text/css" media="all"  th:href="@{../styles/styles.css}">
+</head>
+<body>
+<div class="banner">
+	<div id="bannerTitle">
+		<table>
+			<td>
+				<img id="bannerImg" th:src="@{/Images/hound_logo.jpg}">
+			</td>
+			<td>
+				<h3>UPDATE DOG INFO</h3>
+			</td>
+		</table>
+	</div>
+</div>
+<br/>
+	<form th:action="@{/updateDogInfo}" th:object="${dog}" method="post">
+		<input type="hidden" th:field="*{entryNumber}">
+		<table id="updateDog">
+			<tr>
+				<th>DOG NAME</th>
+				<td><input type="text" th:field="*{name}"><br/></td>
+			</tr>
+			<tr>
+				<th>OWNER NAME</th>
+				<td><input type="text" th:field="*{ownerName}"><br/></td>
+			</tr>
+			<tr>
+				<th>DOG BREED</th>
+				<td><select th:name="breed">
+						<option th:each="breed : ${ListOfBreeds}" th:value="${breed.name}" th:text="${breed.name}">
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>DOG GENDER</th>
+				<td><input type="radio" th:name="gender" th:id="gender" th:value="Male">MALE</input>
+				<input type="radio" th:name="gender" th:id="gender" th:value="Female">FEMALE</input></td>
+			</tr>	
+			<tr>
+				<th>DOG CLASS / SPECIALTY</th>
+				<td><input type="radio" th:name="classSpecialty" th:id="classSpecialty" th:value="class">CLASS</input>
+				<input type="radio" th:name="classSpecialty" th:id="classSpecialty" th:value="specialty">SPECIALTY</input></td>
+			</tr>	
+			<tr>
+				<td colspan="2"><input id="submit" type="submit" value="Update"></td>
+			</tr>
+			<tr>
+				<a id="updateDogBack" th:href="@{/dogList}"><span id="updateDogBackBtn">BACK</span></a>
+			</tr>
+		</table>
+	</form>
+	
+	
+</div>
+</body>
+</html>

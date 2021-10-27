@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" media="all"  th:href="@{../styles/styles.css}">
+<title>Add Breed</title>
+</head>
+<body>
+<div class="banner">
+	<div id="bannerTitle">
+		<table>
+			<td>
+				<img id="bannerImg" th:src="@{/Images/hound_logo.jpg}">
+			</td>
+			<td>
+				<h3>ADD DOG BREED</h3>
+			</td>
+		</table>
+	</div>
+</div>
+<br/>
+<div class="addBreed">
+	<form th:action="@{/addBreed}" th:object="${dogBreed}" method="post">
+	
+		<table id="addBreed">
+			<tr>
+				<th><span>BREED</span></th>
+				<td><input type="text" th:field="*{name}"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input id="submit" type="submit" value="ADD BREED"></td>
+			</tr>
+		</table>
+	</form>
+</div>
+<br/>
+<hr/>
+<table id="breedList">
+	<tr>
+		<th colspan=2><h3 class="subHeading">LIST OF BREEDS</h3></th>
+	</tr>
+	<tr th:each="dogBreed : ${dogBreeds}">
+		<td th:text="${dogBreed.name}"></td>
+		<td><a id="deleteForm" th:href="@{/delete/{id}(id=${dogBreed.id})}"><span>DELETE</span></a></td>
+	</tr>
+	<tr >
+		<td colspan="2"><a id="back" th:href="@{/}"><span>BACK</span></a></td>
+	</tr>
+</table>
+</body>
+</html>

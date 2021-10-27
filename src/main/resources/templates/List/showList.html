@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SHOW LIST</title>
+<link rel="stylesheet" type="text/css" media="all"  th:href="@{../styles/styles.css}">
+</head>
+<body>
+<div class="banner">
+	<div id="bannerTitle">
+		<table>
+			<td>
+				<img id="bannerImg" th:src="@{/Images/hound_logo.jpg}">
+			</td>
+			<td>
+				<h3>SHOW LIST</h3>
+			</td>
+		</table>
+	</div>
+</div>
+<br/>
+
+<table id="showListTable">
+	<tr>
+		<td><span th:text="${breedOne}"></span></td><td><span th:text="${beagle.breed}"></span></td><td><span th:text="${beagleCM}"></span></td><td>-</td><td><span th:text="${beagleCF}"></span></td><td>-</td><td><span th:text="${beagleSM}"></span></td><td>-</td><td><span th:text="${beagleSF}"></span></td>
+	</tr>
+	<tr>
+		<td><span th:text="${breedTwo}"></span></td><td><span th:text="${dMLH.breed}"></span></td><td><span th:text="${dMLH_CM}"></span></td><td>-</td><td><span th:text="${dMLH_CF}"></span></td><td>-</td><td><span th:text="${dMLH_SM}"></span></td><td>-</td><td><span th:text="${dMLH_SF}"></span></td>
+	</tr>
+	<tr>
+		<td><span th:text="${breedThree}"></span></td><td><span th:text="${dMS.breed}"></span></td><td><span th:text="${dMS_CM}"></span></td><td>-</td><td><span th:text="${dMS_CF}"></span></td><td>-</td><td><span th:text="${dMS_SM}"></span></td><td>-</td><td><span th:text="${dMS_SF}"></span></td>
+	</tr>
+	<tr>
+		<td><span th:text="${breedFour}"></span></td><td><span th:text="${dSLH.breed}"></span></td><td><span th:text="${dSLH_CM}"></span></td><td>-</td><td><span th:text="${dSLH_CF}"></span></td><td>-</td><td><span th:text="${dSLH_SM}"></span></td><td>-</td><td><span th:text="${dSLH_SF}"></span></td>
+	</tr>
+	<tr>
+		<td><span th:text="${breedFive}"></span></td><td><span th:text="${Whip.breed}"></span></td><td><span th:text="${Whip_CM}"></span></td><td>-</td><td><span th:text="${Whip_CF}"></span></td><td>-</td><td><span th:text="${Whip_SM}"></span></td><td>-</td><td><span th:text="${Whip_SF}"></span></td>
+	</tr>
+	<tr>
+		<td><span th:text="${breedSix}"></span></td><td><span th:text="${Afg.breed}"></span></td><td><span th:text="${Afg_CM}"></span></td><td>-</td><td><span th:text="${Afg_CF}"></span></td><td>-</td><td><span th:text="${Afg_SM}"></span></td><td>-</td><td><span th:text="${Afg_SF}"></span></td>
+	</tr>
+	<tr>
+		<td><span th:text="${breedSeven}"></span></td><td><span th:text="${Bor.breed}"></span></td><td><span th:text="${Bor_CM}"></span></td><td>-</td><td><span th:text="${Bor_CF}"></span></td><td>-</td><td><span th:text="${Bor_SM}"></span></td><td>-</td><td><span th:text="${Bor_SF}"></span></td>
+	</tr>
+	<tr>
+		<td><span th:text="${breedEight}"></span></td><td><span th:text="${Deer.breed}"></span></td><td><span th:text="${Deer_CM}"></span></td><td>-</td><td><span th:text="${Deer_CF}"></span></td><td>-</td><td><span th:text="${Deer_SM}"></span></td><td>-</td><td><span th:text="${Deer_SF}"></span></td>
+	</tr>
+	<tr>
+		<td><span th:text="${breedNine}"></span></td><td><span th:text="${Grey.breed}"></span></td><td><span th:text="${Grey_CM}"></span></td><td>-</td><td><span th:text="${Grey_CF}"></span></td><td>-</td><td><span th:text="${Grey_SM}"></span></td><td>-</td><td><span th:text="${Grey_SF}"></span></td>
+	</tr>
+	<tr>
+		<td><span th:text="${breedTen}"></span></td><td><span th:text="${Irish.breed}"></span></td><td><span th:text="${Irish_CM}"></span></td><td>-</td><td><span th:text="${Irish_CF}"></span></td><td>-</td><td><span th:text="${Irish_SM}"></span></td><td>-</td><td><span th:text="${Irish_SF}"></span></td>
+	</tr>
+	<tr>
+		<td colspan="9"><a id="showListBtn" th:href="@{/}"><span id="showList">BACK</span></a></td>
+	</tr>
+</table>
+</body>
+</html>

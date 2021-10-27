@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" media="all"  th:href="@{../styles/styles.css}">
+</head>
+<body>
+<div class="banner">
+	<div id="bannerTitle">
+		<table>
+			<td>
+				<img id="bannerImg" th:src="@{/Images/hound_logo.jpg}">
+			</td>
+			<td>
+				<h3>LIST OF DOGS</h3>
+			</td>
+		</table>
+	</div>
+</div>
+<br/>
+	<table id="dogList">
+		<tr>
+			<th><span>Entry number</span></th>
+			<th><span>Dog's name</span></th>
+			<th><span>Owner's name</span></th>
+			<th><span>Dog Breed</span></th>
+			<th><span>Gender</span></th>
+			<th><span>classSpecialty</span></th>
+			<th><span></th>
+			<th><span></th>
+		</tr>
+		<tr th:each="dog : ${ListOfDogs}">
+			<td th:text="${dog.entryNumber}"></td>
+			<td th:text="${dog.name}"></td>
+			<td th:text="${dog.ownerName}"></td>
+			<td th:text="${dog.breed}"></td>
+			<td th:text="${dog.gender}"></td>
+			<td th:text="${dog.classSpecialty}"></td>
+			<td><a id="updateDog" th:href="@{/updateDogInfo/{id}(id=${dog.entryNumber})}"><span id="dogUpdateBtn">UPDATE DOG</span></a></td>
+			<td><a id="deleteDog" th:href="@{/deleteDogInfo/{id}(id=${dog.entryNumber})}"><span id="dogDeleteBtn">DELETE DOG</span></a></td>
+		</tr>
+		<tr>
+			<td colspan=6><a id="addDog" th:href="@{/addDog}"><span id="addDogBtn">ADD DOG</span></a></td>
+			<td colspan=2><a id="dogBack" th:href="@{/}"><span id="backBtn">BACK</span></a></td>
+		</tr>
+	</table>
+</body>
+</html>
